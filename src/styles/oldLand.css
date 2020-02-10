@@ -1,0 +1,279 @@
+.landing_container {
+	width: 100%;
+}
+
+.emphasize_bi {
+	font-weight: 600;
+	font-style: italic;
+}
+
+.b {
+	font-weight: 600;
+}
+
+.sb {
+	font-weight: 500;
+}
+
+.i {
+	font-style: italic;
+}
+
+.smlcaps {
+	font-variant: small-caps;
+}
+
+.land_hero {
+	/* width: 99vw; */
+	height: 80vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 30% 1fr;
+	gap: 4%;
+}
+.hero_animator {
+	grid-column: 1/-1;
+	grid-row: 1/-1;
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	color: darkcyan;
+}
+
+.hero_intro_lhs {
+	text-align: right;
+	grid-column: 1/2;
+	grid-row: 2;
+	z-index: 2;
+	/* display: flex; */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	text-shadow: 2px 2px 4px #0000001a;
+	filter: contrast(1.5);
+}
+
+.hero_intro_rhs_img {
+	grid-column: 2/-1;
+	grid-row: 2;
+	z-index: 2;
+	position: relative;
+}
+
+.hero_intro_rhs_img::before {
+	content: ' ';
+	width: inherit;
+	height: inherit;
+	border: solid 2px var(--col_accent_blue);
+	position: absolute;
+	left: 50px;
+	top: -50px;
+	z-index: 1;
+}
+
+.hero_intro_rhs {
+	text-align: left;
+	grid-column: 2;
+	grid-row: 3;
+	z-index: 2;
+	font-weight: 600;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	max-width: 20ch;
+	/* display: flex; */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}
+
+.intro_text {
+	width: 100%;
+	max-width: 20ch;
+	/* display: flex; */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}
+
+.section_container {
+	/* display: flex; */
+	width: 100%;
+}
+
+.land_intro {
+	/* background-color: #1d1d2d; */
+	/* background-color: var(--col_app_text_back_onl);
+	background-color: whitesmoke;
+	color: var(--col_app_text_front_onl); */
+	background-color: var(--col_secondary);
+}
+
+.container_aside {
+	width: 100%;
+	flex-wrap: wrap;
+	padding: 4vh 4%;
+	background-color: var(--col_primary_accent);
+	text-align: end;
+}
+
+.aside_title {
+	cursor: pointer;
+	font-weight: 600;
+	letter-spacing: 1.2px;
+	/* transform: rotate(-90deg); */
+}
+
+.container_main {
+	width: 80%;
+	min-width: 960px;
+	margin: 0 auto;
+	padding: 4vh 4%;
+
+	text-align: start;
+	font-size: 1rem;
+	line-height: 1.625em;
+	font-weight: 400;
+}
+
+.container_main:first-child {
+	margin-top: 0;
+}
+
+.profile_roles {
+	margin: auto 8px;
+	padding: 0 4px;
+	border-bottom: solid 2px;
+	border-radius: 1px;
+}
+
+.container_spacer {
+	min-width: 10px;
+	width: 10%;
+	flex: 1;
+}
+
+.skill_list {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.skill_card {
+	/* min-width: 25%;
+	min-height: 200px; */
+	margin: 1vh;
+	padding: 1vh;
+	/* background-color: var(--col_primary_accent); */
+	/* border-radius: 8px;
+	border: solid 1px royalblue; */
+	/* border-bottom: solid 3px;
+	border-color: var(--col_accent_blue); */
+	/* box-shadow: 0 4px 2px rgba(65, 105, 225, 0.3); */
+}
+
+.skill_name {
+	margin: 0 20px 0 12px;
+	color: var(--col_accent_blue);
+	font-size: 0.9rem;
+	/* letter-spacing: 1px; */
+}
+
+.tech_card {
+	/* min-width: 25%; */
+	margin: 2vh;
+	padding: 2vh;
+	/* background-color: var(--col_primary_accent);
+	font-family: 'Roboto Mono'; */
+	/* border-radius: 50%; */
+	/* color: steelblue; */
+	/* border-bottom: solid 3px;
+	border-color: var(--col_accent_green); */
+}
+
+.tech_label {
+	min-width: 120px;
+	background-color: var(--col_secondary);
+	border-radius: 40px;
+	box-shadow: 1px 1px 4px var(--col_secondary);
+	font-family: 'Roboto Mono';
+
+	display: flex;
+	align-items: center;
+}
+
+.last_used {
+	text-transform: uppercase;
+	font-size: 0.6em;
+	letter-spacing: 1px;
+	font-variant-caps: titling-caps;
+}
+
+.tech_name {
+	color: var(--col_accent_green);
+	margin: 0 20px 0 12px;
+	font-size: 0.9rem;
+	/* line-height: 1.2em; */
+	/* letter-spacing: 1px; */
+}
+
+.tech_logo {
+	width: 40px;
+	height: 40px;
+	display: block;
+	border-radius: 50%;
+	background-color: #fafafa1a;
+	object-fit: contain;
+	background-size: contain;
+	padding: 2px;
+	/* border: solid 1px;
+	border-color: var(--col_accent_green); */
+}
+.proj_list {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.proj_list:first-child {
+	margin-top: 0;
+}
+
+.proj_card {
+	/* margin: 2vh; */
+	margin: 8px;
+	padding: 2vh;
+	width: 48%;
+	/* max-width: 304px; */
+	max-width: 440px;
+	background-color: var(--col_secondary);
+	border-radius: 4px;
+	box-shadow: 1px 1px 4px var(--col_secondary);
+	border-bottom: solid 4px var(--col_accent_purple);
+}
+
+.proj_skill_list {
+	font-family: 'Roboto Mono';
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.skill_tag {
+	background-color: var(--col_primary_accent);
+	font-size: 0.6rem;
+	border-radius: 40px;
+	padding: 4px 10px;
+	margin: 4px 8px;
+}
+
+.item_id {
+	padding: 4px 8px;
+	width: 36px;
+	height: 36px;
+	text-align: center;
+	background-color: var(--col_primary_accent);
+	color: goldenrod;
+	border: solid 2px var(--col_accent_purple);
+	border-radius: 40% 0;
+}

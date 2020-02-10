@@ -1,0 +1,164 @@
+:root {
+	/* Colors */
+	--col_back_base: #f2f2f2;
+	--col_back_elevated: rgba(250, 250, 250, 0.7);
+	--col_back_ele_opaque: rgba(250, 250, 250, 1);
+	--col_active: #1a42f4;
+	--col_active_2: #4162f6;
+	--col_active_lite: #4464f4;
+	--col_active_shadow: rgba(26, 66, 244, 0.3);
+	--col_active_shadow_lite: rgba(26, 66, 244, 0.16);
+	--col_active_2_shadow: rgba(65, 98, 246, 0.3);
+	--col_active_text: var(--col_back_base);
+	--col_action: #fff176;
+	--col_action_2: #ffee5c;
+	--col_action_shadow: rgba(255, 241, 118, 0.16);
+	--col_action_2_shadow: rgba(255, 238, 92, 0.16);
+	--col_action_text: var(--col_text_head);
+	--col_text_head: rgb(50, 50, 50);
+	--col_text_code: rgb(16, 32, 40);
+	--col_text_sub: rgba(16, 32, 40, 0.8);
+	--col_text_quote: rgba(40, 40, 40, 0.75);
+
+	--size_text_head_1_lap: 5rem;
+	--size_text_head_1_mob: 3rem;
+	--size_text_head_2_lap: 4rem;
+	--size_text_head_2_mob: 2rem;
+	--size_text_sub_lap: 2rem;
+	--size_text_sub_mob: 1.2rem;
+	--size_text_code_lap: 1rem;
+	--size_text_code_mob: 0.8rem;
+
+	/* --col_rich_black_accent: #010203cc;
+	--col_rich_black_primary: #0d0e0fff;
+	--col_rich_black_secondary: #0c1018;
+
+	--col_app_text_back_onlig: rgb(255, 239, 213);
+	--col_app_text_front_onlig: #010203;
+	--col_primary_accent: #010203;
+	--col_primary: #121212;
+	--col_secondary: #212121; */
+	/* --col_primary: #0d0e0f; */
+	/* --col_secondary: #17182b; */
+	/* --col_accent: #222832;
+	--col_accent_blue2: #00adb5;
+	--col_accent_blue: #00c0d2;
+	--col_accent_green: #b0db43;
+	--col_accent_green2: #d2f740;
+	--col_accent_purple: #6448d2;
+	--col_accent_cream: #eaeaea;
+	--col_accent_yellow: #fff176;
+	--col_accent_yellow2: #ffeb3b; */
+}
+
+.emphasize_bi {
+	font-weight: 600;
+	font-style: italic;
+}
+
+.b {
+	font-weight: 600;
+}
+
+.sb {
+	font-weight: 500;
+}
+
+.i {
+	font-style: italic;
+}
+
+.smlcaps {
+	font-variant: small-caps;
+}
+
+.active_text {
+	color: var(--col_active);
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* background-color: #282c34; */
+	/* background-color: var(--col_back_base); */
+	text-align: center;
+	font-size: calc(10px + 2vmin);
+	text-rendering: optimizelegibility;
+}
+
+.app_logo {
+	height: 92%;
+	align-self: center;
+	justify-self: center;
+}
+
+.app_header {
+	height: 80px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	display: sticky;
+	position: flex-start;
+	align-items: center;
+	padding: 1vh 4vh;
+	box-shadow: 0 3px 6px rgba(34, 34, 34, 0.16);
+	z-index: 10;
+}
+
+.app_container {
+	min-height: 80vh;
+	width: 100%;
+	position: relative;
+}
+
+.app_back_animated {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	width: 100%;
+	max-height: unset;
+	/* height: calc(200%); */
+	z-index: -1;
+	background-color: var(--col_back_base);
+	color: var(--col_active);
+}
+
+.app_title {
+	color: var(--col_text_code);
+	font-family: 'Poppins';
+	font-size: 1rem;
+	text-align: start;
+	line-height: 1.1em;
+	font-weight: 500;
+	letter-spacing: 2px;
+	font-variant-caps: all-small-caps;
+}
+
+.btn_cta {
+	padding: 0.5rem 1rem;
+	background: linear-gradient(60deg, var(--col_action), var(--col_action_2));
+	border-radius: 4px;
+	/* background-color: var(--col_back_elevated);
+	color: var(--col_active); */
+	/* border-left: solid 2px var(--col_active); */
+	/* border-radius: 2rem; */
+	box-shadow: 0 1px 2px var(--col_action_2_shadow);
+	font-family: 'Poppins';
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 1.2px;
+}
+
+@media only screen and (min-width: 481px) {
+	.btn_cta {
+		background-color: var(--col_back_elevated);
+		padding: 0.5rem 1rem;
+		font-size: 0.8rem;
+		letter-spacing: 1.2px;
+	}
+}
