@@ -234,8 +234,8 @@
 }
 
 .proj_tag:hover {
-	background-color: var(--col_active);
-	color: var(--col_active_text);
+	/* background-color: var(--col_active);
+	color: var(--col_active_text); */
 }
 
 @media only screen and (min-width: 481px) {
@@ -369,13 +369,13 @@
 	}
 
 	.serv_card_eg {
-		font-size: 1rem;
+		font-size: 1.1rem;
 		line-height: 1.25em;
 	}
 
 	.serv_card_desc {
 		font-size: 1.2rem;
-		line-height: 1.4em;
+		line-height: 1.5em;
 	}
 
 	.serv_card_exp {

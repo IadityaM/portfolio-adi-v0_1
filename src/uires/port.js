@@ -7,8 +7,19 @@ import logo_ang from '../uires/logos/angular_logo.svg';
 import logo_node from '../uires/logos/node_logo.svg';
 import logo_react from '../uires/logos/react-logo.svg';
 import logo_python from '../uires/logos/python-logo-notext.svg';
-import logo_tf from '../uires/logos/tf_logo.svg';
-import logo_pytorch from '../uires/logos/pytorch-logo-icon.svg';
+// import logo_tf from '../uires/logos/tf_logo.svg';
+// import logo_pytorch from '../uires/logos/pytorch-logo-icon.svg';
+
+export const getWAString = (
+	msg = `Hey Aditya! Saw your developer portfolio. Would love to talk to you for a project. Drop me a message when you're free.`,
+	number = '917678114688'
+) => {
+	// const number = '917678114688';
+
+	// const msg_original = `Hey Aditya! Saw your developer portfolio. Would love to talk to you for a project. Drop me a message when you're free.`;
+	// const msg = `Hey%20Aditya!%20Saw%20your%20developer%20portfolio.%20Would%20love%20to%20talk%20to%20you%20for%20a%20project.%20Drop%20me%20a%20message%20when%20you're%20free.`
+	return `https://api.whatsapp.com/send?phone=` + number + `&text=` + msg + '';
+};
 
 const port = {
 	g_name: `Aditya`,
@@ -44,10 +55,11 @@ const port = {
 			title: `Web App Development`,
 			title_long: 'Front End Web Developer',
 			eg: `eg. landing page, home page, blog, portfolio, resume, etc.`,
-			description: `"I will build fast and scalable websites to take you business online in a timely, cost efficient way."`,
+			description: `"Get fast and scalable websites to take your business online in a timely, cost efficient way."`,
 			cta: `Build me a website`,
+			cta_msg: `Hey Aditya! Saw your developer portfolio. I need you to build a website for me. Drop me a message when you're free. `,
 			projects: [`1`, `2`, `3`, `4`, `8`, `9`],
-			img_src: `https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2440`,
+			img_src: `https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600`,
 			img_cred: '',
 		},
 		{
@@ -57,10 +69,11 @@ const port = {
 			title: `Android App Development`,
 			title_long: 'Android App Developer',
 			eg: `eg. Personal, Event, eStore, etc.`,
-			description: `"I will build fast and intuitive mobile apps to get you services into the pockets of your users."`,
+			description: `"Get fast and intuitive mobile apps to put your services into the pockets of your users."`,
 			cta: `Build me an App`,
+			cta_msg: `Hey Aditya! Saw your developer portfolio. I need you to build an Android App for me. Drop me a message when you're free. `,
 			projects: [`1`, `4`, `5`, `6`, `7`, `10`, `11`, `12`, `13`],
-			img_src: `https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2160`,
+			img_src: `https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600`,
 			img_cred: '',
 		},
 		{
@@ -70,8 +83,9 @@ const port = {
 			title: `Design`,
 			title_long: 'Human Centric Graphics Designer',
 			eg: `eg. App UI/UX, Web UI/UX, Posters, Book Covers, Logos, Visiting Cards, Leaflets, Prospectus, etc.`,
-			description: `"I will design inspired pieces of graphics to bring joy and get attention from your target usersy. All to give your brand the unique identity it deserves."`,
+			description: `"Get inspired pieces of graphics to bring joy to your target users and earn their attention, giving your brand the unique identity it deserves."`,
 			cta: `Build my visual brand`,
+			cta_msg: `Hey Aditya! Saw your design portfolio. I need you to design some graphics for me. Drop me a message when you're free. `,
 			projects: [
 				`15`,
 				`16`,
@@ -86,7 +100,7 @@ const port = {
 				`25`,
 				`26`,
 			],
-			img_src: `https://images.unsplash.com/photo-1539883305165-f691affc6c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2160`,
+			img_src: `https://images.unsplash.com/photo-1539883305165-f691affc6c54?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600`,
 			img_cred: '',
 		},
 		{
@@ -96,11 +110,39 @@ const port = {
 			title: `Social Media Marketing`,
 			title_long: 'Social Media Evangelist',
 			eg: `eg. Facebook Pages & Groups, Instagram, Twitter, LinkedIn`,
-			description: `"With my experice in designing targeted engaging experiences I will create engagement strategies and content to build your brand in a social brand"`,
+			description: `"With my experience in designing targeted engaging experiences get engagement strategies and content to build your venture into a social brand"`,
 			cta: `Build my social brand`,
+			cta_msg: `Hey Aditya! Saw your marketing portfolio. I need you to help me build by brand and market it. Drop me a message when you're free. `,
 			projects: [`2`, `4`, `5`, `15`, `16`, `19`, `24`, `25`],
-			img_src: `https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=2160`,
+			img_src: `https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=1600`,
 			img_cred: '',
+		},
+	],
+	blog: [
+		{
+			id: '1',
+			title: 'Design is more than just how it looks',
+			link:
+				'https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+			img_src:
+				'https://images.unsplash.com/photo-1476357471311-43c0db9fb2b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+			timestamp: '3rd September 2019',
+		},
+		{
+			id: '2',
+			title: 'Taking design decisions with your customers',
+			link: '',
+			img_src:
+				'https://images.unsplash.com/photo-1557425747-929b65a39785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+			timestamp: '3rd October 2019',
+		},
+		{
+			id: '3',
+			title: 'Mythical Designs that make everyone happy!',
+			link: '',
+			img_src:
+				'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80',
+			timestamp: '3rd November 2019',
 		},
 	],
 	skills: [
@@ -767,7 +809,7 @@ const port = {
 			id: `24`,
 			started: 2018,
 			completed: 2018,
-			title: `Content Design & SMM`,
+			title: `Content Design & SMM for IITD Startup Basecamp`,
 			description: ``,
 			tech_used: [null],
 			skills_used: [`7`, `12`],
@@ -781,7 +823,7 @@ const port = {
 			id: `25`,
 			started: 2018,
 			completed: 2018,
-			title: `Content Design & SMM`,
+			title: `Content Design & SMM for TDC participants' App`,
 			description: ``,
 			tech_used: [null],
 			skills_used: [`7`, `12`],
@@ -795,7 +837,7 @@ const port = {
 			id: `26`,
 			started: 2013,
 			completed: 2016,
-			title: `Poster & Banner Design`,
+			title: `Poster & Banner Design for Tredbook`,
 			description: ``,
 			tech_used: [null],
 			skills_used: [`7`],

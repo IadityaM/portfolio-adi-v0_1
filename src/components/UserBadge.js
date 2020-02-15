@@ -6,7 +6,7 @@ function UserBadge({ img_src, name, desig }) {
 		<div className='user_badge'>
 			<Suspense delay='50ms' fallback={<>Loading the cool stuff</>}>
 				<img
-					src='https://avatars2.githubusercontent.com/u/13042657?s=460&v=4'
+					src={img_src}
 					alt='Aditya Mishra as seen on linkedin and github'
 					height='100%'
 					width='auto'
@@ -21,6 +21,14 @@ function UserBadge({ img_src, name, desig }) {
 	);
 }
 
-UserBadge.propTypes = {};
+UserBadge.propTypes = {
+	img_src: PropTypes.string,
+	name: PropTypes.string.isRequired,
+	desig: PropTypes.string.isRequired,
+};
+
+UserBadge.defaultProps = {
+	img_src: `https://avatars2.githubusercontent.com/u/13042657?s=460&v=4`,
+};
 
 export default UserBadge;

@@ -1,7 +1,7 @@
 :root {
 	/* Colors */
 	--col_back_base: #f2f2f2;
-	--col_back_elevated: rgba(250, 250, 250, 0.7);
+	--col_back_elevated: rgba(250, 250, 250, 0.6);
 	--col_back_ele_opaque: rgba(250, 250, 250, 1);
 	--col_active: #1a42f4;
 	--col_active_2: #4162f6;
@@ -13,12 +13,17 @@
 	--col_action: #fff176;
 	--col_action_2: #ffee5c;
 	--col_action_shadow: rgba(255, 241, 118, 0.16);
-	--col_action_2_shadow: rgba(255, 238, 92, 0.16);
+	--col_action_2_shadow: rgba(255, 238, 92, 0.4);
 	--col_action_text: var(--col_text_head);
 	--col_text_head: rgb(50, 50, 50);
 	--col_text_code: rgb(16, 32, 40);
 	--col_text_sub: rgba(16, 32, 40, 0.8);
 	--col_text_quote: rgba(40, 40, 40, 0.75);
+	--col_text_quote_shadow: rgba(40, 40, 40, 0.5);
+
+	--col_whatsapp_1: rgb(1, 230, 117);
+	--col_whatsapp_2: rgb(30, 190, 166);
+	--col_lin_1: var(--col_active_lite);
 
 	--size_text_head_1_lap: 5rem;
 	--size_text_head_1_mob: 3rem;
@@ -28,6 +33,8 @@
 	--size_text_sub_mob: 1.2rem;
 	--size_text_code_lap: 1rem;
 	--size_text_code_mob: 0.8rem;
+
+	--size_header_height: 60px;
 
 	/* --col_rich_black_accent: #010203cc;
 	--col_rich_black_primary: #0d0e0fff;
@@ -95,7 +102,7 @@
 }
 
 .app_header {
-	height: 80px;
+	height: var(--size_header_height);
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
@@ -139,15 +146,19 @@
 	font-variant-caps: all-small-caps;
 }
 
+.pages_container {
+	min-height: 90vh;
+}
+
 .btn_cta {
 	padding: 0.5rem 1rem;
-	background: linear-gradient(60deg, var(--col_action), var(--col_action_2));
+	background: linear-gradient(45deg, var(--col_action), var(--col_action_2));
 	border-radius: 4px;
 	/* background-color: var(--col_back_elevated);
 	color: var(--col_active); */
 	/* border-left: solid 2px var(--col_active); */
 	/* border-radius: 2rem; */
-	box-shadow: 0 1px 2px var(--col_action_2_shadow);
+	box-shadow: 0 1px 3px rgba(34, 34, 34, 0.2);
 	font-family: 'Poppins';
 	font-size: 0.8rem;
 	font-weight: 600;

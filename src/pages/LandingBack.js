@@ -1,28 +1,31 @@
-import React, { Suspense } from 'react';
+import React /*, { Suspense }*/ from 'react';
 // import PropTypes from 'prop-types';
-import { a, useSpring, useTransition } from 'react-spring';
+import {
+	a,
+	// useSpring, useTransition
+} from 'react-spring';
 
 function LandingBack(props) {
-	const calc_dp = (x, y) => [
-		-(y - window.innerHeight / 2) / 20,
-		(x - window.innerWidth / 2) / 20,
-		1.15,
-	];
+	// const calc_dp = (x, y) => [
+	// 	-(y - window.innerHeight / 2) / 20,
+	// 	(x - window.innerWidth / 2) / 20,
+	// 	1.15,
+	// ];
 
-	// const trans = (x, y, s) =>
-	// 	`perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
-	const trans_dp = (x, y, s) =>
-		`perspective(50vh) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+	// // const trans = (x, y, s) =>
+	// // 	`perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+	// const trans_dp = (x, y, s) =>
+	// 	`perspective(50vh) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
-	const [aniprops, set] = useSpring(() => ({
-		xys: [0, 0, 1],
-		config: { mass: 5, tension: 350, friction: 40 },
-	}));
+	// const [aniprops, set] = useSpring(() => ({
+	// 	xys: [0, 0, 1],
+	// 	config: { mass: 5, tension: 350, friction: 40 },
+	// }));
 
-	const [aniprops_dp, set_dp] = useSpring(() => ({
-		xys: [0, 0, 1],
-		config: { mass: 8, tension: 400, friction: 80 },
-	}));
+	// const [aniprops_dp, set_dp] = useSpring(() => ({
+	// 	xys: [0, 0, 1],
+	// 	config: { mass: 8, tension: 400, friction: 80 },
+	// }));
 
 	return (
 		<a.div className='app_back_animated'>

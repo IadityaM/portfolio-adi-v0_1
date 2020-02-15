@@ -1,12 +1,14 @@
 import React, { Suspense } from 'react';
 import PropTypes from 'prop-types';
 import ProjTags from '../tags/ProjTags';
+import { getWAString } from '../../uires/port';
 
 function ServiceCard({
 	intro,
 	eg,
 	description,
 	cta,
+	cta_msg,
 	title_long,
 	projects,
 	img_src,
@@ -40,12 +42,21 @@ function ServiceCard({
 					</p>
 					<p className='serv_card_eg'>{eg}</p>
 					<p className='serv_card_desc'>{description}</p>
-					<button className='serv_card_cta'>{cta}</button>
+					<button
+						className='serv_card_cta'
+						onClick={() =>
+							window.open(
+								getWAString(cta_msg),
+								'_blank' // <- This is what makes it open in a new window.
+							)
+						}>
+						{cta}
+					</button>
 				</div>
 			</article>
 			<div className='serv_card_exp'>
 				<p className='card_exp_label'>
-					Relevant Experiece > <span className='exp_design'>{title_long}</span>
+					Relevant Experience > <span className='exp_design'>{title_long}</span>
 				</p>
 				<ProjTags id_list={projects} />
 			</div>

@@ -14,7 +14,7 @@ const Page404 = lazy(() => import('./pages/DefaultPage'));
 
 //#region App routes
 const displayRoutes = {
-	Home: { name: 'Home', path: '/' },
+	Home: { name: 'Home', path: '*/' },
 	// Dash: { name: 'Dashboard', path: '/dash/', requiresAuth: true },
 	// Jobs: { name: 'Jobs', path: '/jobs' },
 	// Apply: { name: 'Apply', path: '/apply-now' },
@@ -37,7 +37,11 @@ function App() {
 				<LandingBack />
 				<Suspense
 					delayMs='50'
-					fallback={<div>... Loading All Kinds of Cool Stuff... </div>}>
+					fallback={
+						<div className='pages_container'>
+							... Loading All Kinds of Cool Stuff...{' '}
+						</div>
+					}>
 					<Router className='pages_container'>
 						<Landing path={displayRoutes.Home.path} />
 						<Page404 default />

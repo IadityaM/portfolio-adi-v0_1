@@ -4,10 +4,11 @@
 
 .landing_hero {
 	background-color: var(--col_back_elevated);
-	padding: 5%;
+	padding: 5% 4% 4%;
 	text-align: start;
 	display: flex;
-	height: 72vh;
+	min-height: 68vh;
+	backdrop-filter: blur(1.2);
 }
 
 .lh_backdrop_temp {
@@ -18,11 +19,11 @@
 	right: 0;
 
 	width: 100%;
-	height: calc(72vh + 7.2vh);
+	height: calc(68vh);
 	/* max-height: 72vh; */
 	object-fit: cover;
 
-	filter: contrast(2) brightness(0.5) blur(1.8px);
+	filter: contrast(2) brightness(0.75) blur(1.5px);
 	/* height: calc(200%); */
 	background-color: var(--col_back_base);
 	color: var(--col_active);
@@ -66,7 +67,7 @@
 .hero_desig {
 	/* margin: 0; */
 	margin-top: 4px;
-	font-size: 0.6rem;
+	font-size: 0.7rem;
 	line-height: 1.1em;
 	font-family: 'Roboto Mono';
 	letter-spacing: -0.5px;
@@ -86,12 +87,48 @@
 	letter-spacing: -1px;
 }
 
+.hero_beating_heart {
+	display: inline-block;
+	color: #ff1744;
+	padding: 1vh 0;
+	animation: beatHeart 2s infinite;
+}
+
+@keyframes beatHeart {
+	30%,
+	60% {
+		transform: scale(1.2, 1.2);
+	}
+	15%,
+	45% {
+		transform: scale(0.9, 0.92);
+	}
+	0%,
+	90%,
+	100% {
+		transform: scale(1, 1);
+	}
+}
+
+@keyframes beat2 {
+	0% {
+		transform: scale(1);
+	}
+	20% {
+		transform: scale(1.25);
+	}
+	40% {
+		transform: scale(1.5);
+	}
+}
+
 .quote_container {
 	margin: 2vh 0;
 	width: 100%;
 	border-left: solid 2px var(--col_active);
 	padding: 1vh 3vh;
 	color: var(--col_text_quote);
+	filter: drop-shadow(0.1px 0.1px 0.1px var(--col_text_quote_shadow));
 	/* box-shadow: inset 2px 0 4px var(--col_action_2_shadow); */
 	/* padding-left: 2vh; */
 	font-size: 0.8rem;
@@ -100,24 +137,33 @@
 	font-style: italic;
 }
 
+.quote_emphasis {
+	/* font-weight: 500; */
+}
+
 .land_about {
 	width: 100%;
 	min-height: min-content;
-	height: 136vh;
+	/* height: 180vh; */
 	text-align: start;
 	position: relative;
 	filter: drop-shadow(0px 2px 6px rgba(20, 20, 20, 0.16));
+	display: grid;
+	grid-template-rows: 1fr 8fr 1fr;
+	grid-template-columns: 1fr 14fr 1fr;
 	/* background-color: blanchedalmond; */
 }
 
 .land_about_back {
-	position: absolute;
+	grid-row: 1/-1;
+	grid-column: 1/-1;
+	/* position: absolute;
 	top: 0%;
 	left: 0%;
 	bottom: 0%;
-	right: 0%;
+	right: 0%; */
 	display: flex;
-	flex-grow: 1;
+	/* flex-grow: 1; */
 	/* height: auto; */
 	background-color: var(--col_action);
 	background: linear-gradient(to top, var(--col_action), var(--col_action_2));
@@ -126,9 +172,13 @@
 }
 
 .land_about_main {
-	position: absolute;
+	grid-row: 1/-1;
+	grid-column: 1/-1;
+	/* position: absolute;
 	top: 0%;
 	left: 0%;
+	bottom: 0%;
+	right: 0%; */
 	display: flex;
 	flex-direction: column;
 	align-self: center;
@@ -140,14 +190,14 @@
 	/* min-height: 60vh; */
 	background-color: var(--col_back_ele_opaque);
 	clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%);
-	color: var(--col_text_quote);
-	z-index: 1;
 
-	font-size: 1rem;
-	line-height: 1.4em;
+	z-index: 1;
 }
 
 .land_about_content {
+	color: var(--col_text_quote);
+	font-size: 1rem;
+	line-height: 1.4em;
 	width: 100%;
 }
 
@@ -174,14 +224,16 @@
 	width: 100%;
 	margin-inline-start: 4%;
 	display: flex;
-	align-items: baseline;
-	justify-content: stretch;
-	overflow-x: auto;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
 	padding: 1%;
 }
 
 .blog_item {
 	width: 240px;
+	margin-right: 1vw;
+	margin-bottom: 2vh;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--col_back_ele_opaque);
@@ -191,7 +243,7 @@
 
 .blog_item:hover {
 	box-shadow: 0 4px 8px rgba(34, 34, 34, 0.2);
-	translate: 0 -4px;
+	translate: 0 -5px;
 }
 
 .blog_img_container {
@@ -273,7 +325,7 @@
 }
 
 .contact_btn {
-	margin: 4vh 0;
+	margin: 3vh 0;
 	padding: 1rem 2rem;
 	/* background-color: var(--col_action); */
 	/* color: var(--col_back_base); */
@@ -288,6 +340,36 @@
 	/* border-color: var(--col_text_quote); */
 }
 
+.contact_btn_wa {
+	/* margin: 1vh 1vh; */
+	padding: 1rem 2rem;
+	font-size: 1.4rem;
+	font-weight: 400;
+	background-color: white;
+	border: solid 2px var(--col_whatsapp_2);
+	color: var(--col_whatsapp_2);
+	filter: contrast(1.25);
+	/* background: linear-gradient(
+		60deg,
+		var(--col_whatsapp_1),
+		var(--col_whatsapp_2)
+	); */
+}
+
+.contact_btn_wa > span {
+	color: var(--col_whatsapp_2);
+}
+
+.contact_btn_lin {
+	padding: 1rem 1.4rem;
+	font-size: 1.4rem;
+	font-weight: 400;
+	background-color: white;
+	border: solid 2px var(--col_lin_1);
+	color: var(--col_lin_1);
+	filter: contrast(1.25);
+}
+
 .land_footer {
 	padding: 8px 16px;
 
@@ -300,11 +382,12 @@
 
 @media only screen and (min-width: 481px) {
 	.landing_hero {
-		height: 72vh;
+		/* height: 72vh; */
 	}
 
 	.lh_backdrop_temp {
-		height: calc(72vh + 70px);
+		min-height: calc(75vh);
+		object-position: 0 75%;
 	}
 
 	.hero_main {
@@ -335,10 +418,15 @@
 	.land_about {
 		width: 100%;
 		min-height: min-content;
-		height: 74vh;
+		grid-template-rows: 2fr 8fr 2fr;
+		grid-template-columns: 1fr 14fr 1fr;
+		/* height: 74vh; */
 		text-align: start;
 		position: relative;
 		filter: drop-shadow(0px 2px 6px rgba(20, 20, 20, 0.16));
+		display: grid;
+		grid-template-rows: 1fr 8fr 1fr;
+		grid-template-columns: 1fr 14fr 1fr;
 		/* background-color: blanchedalmond; */
 	}
 
@@ -347,13 +435,13 @@
 	}
 
 	.land_about_main {
-		padding: 12vh 16vh;
-		flex-direction: row-reverse;
+		padding: 12vh 8%;
+		/* flex-direction: row-reverse; */
 		justify-content: space-between;
 		clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
 	}
 
-	.land_about_content {
+	/* .land_about_content {
 		width: 44%;
 		font-size: 1.2rem;
 		line-height: 1.3em;
@@ -361,14 +449,15 @@
 
 	.land_about_pic {
 		width: 48%;
-	}
+	} */
 
 	.land_blog {
-		margin: 8% 0;
-		padding: 8%;
+		margin: 8vh 0;
+		padding: 8vh 4%;
 
 		display: flex;
 		text-align: start;
+		align-items: flex-start;
 	}
 
 	.blog_msg {
@@ -386,6 +475,18 @@
 		line-height: 1.1em;
 	}
 
+	.blog_item_container {
+		/* width: 100%;
+		margin-inline-start: 4%;
+		display: flex; */
+		flex-direction: row;
+		align-items: baseline;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		overflow-x: auto;
+		padding: 1%;
+	}
+
 	.contact_title {
 		font-size: 4rem;
 		line-height: 1.1em;
@@ -396,8 +497,32 @@
 		/* width: 30ch; */
 	}
 
+	.contact_btn_wa,
+	.contact_btn_lin {
+		margin: 0 2vh;
+	}
+
 	.land_footer {
 		padding: 12px 0;
 		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.land_about_main {
+		padding: 12vh 16vh;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
+	}
+
+	.land_about_content {
+		width: 40%;
+		font-size: 1.2rem;
+		line-height: 1.3em;
+	}
+
+	.land_about_pic {
+		width: 48%;
 	}
 }

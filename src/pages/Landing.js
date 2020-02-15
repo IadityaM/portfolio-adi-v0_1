@@ -3,13 +3,14 @@ import React, { lazy, Suspense, useState } from 'react';
 // import { a, useSpring, useTransition } from 'react-spring';
 
 import '../styles/Landing.css';
-import port from '../uires/port';
+import port, { getWAString } from '../uires/port';
 import UserBadge from '../components/UserBadge';
 import MyQuote from '../components/MyQuote';
-import genericLogo from '../uires/logos/node_logo.svg';
-import OldRef from '../zxtras/OldRef';
+// import genericLogo from '../uires/logos/node_logo.svg';
+// import OldRef from '../zxtras/OldRef';
 
 import pic_launcher from '../uires/svgs/adi_maker_launcher.svg';
+// import { useWindowSize } from '../hooks/commonHooks';
 // import pic_worker from '../uires/svgs/undraw_work_together.svg';
 
 const pic_source =
@@ -27,30 +28,30 @@ function Hero(props) {
 				/>
 				<h1 className='hero_title'>Product Developer</h1>
 				<p className='hero_subtitle'>
-					with the <span className='active_text'>heart of a designer</span>.
+					with the{' '}
+					<span
+						role='img'
+						className='hero_beating_heart'
+						aria-label='symbol of heart emoji'>
+						❤
+					</span>{' '}
+					<span className='active_text'>of a designer</span>.
 				</p>
-				<MyQuote
-					quote={`To design is to tell a story. In product design it's about telling the story that people want - meaningful, enjoyable, concise & worth re-telling.`}
-					source='Aditya'
-				/>
+				<MyQuote source='Aditya'>
+					To design is to tell a story. In product design it's all about telling
+					the story that people want - i.e.{' '}
+					<span className='quote_emphasis'>
+						meaningful, enjoyable, concise & worth re-telling.
+					</span>
+				</MyQuote>
 			</div>
-			<Suspense
-				fallback={<div>Loading images from API. Please wait a sec</div>}>
-				<img
-					src={pic_source}
-					width='100%'
-					height='calc(72vh)'
-					alt='backdrop'
-					className='lh_backdrop_temp'
-				/>
-			</Suspense>
 		</section>
 	);
 }
 
 const Landing = (props) => {
-	const [pro, setpro] = useState(port);
-
+	const [pro] = useState(port);
+	// const win_size = useWindowSize();
 	// const services = (
 	// 	<section className='land_services'>
 	// 		<h4 className='serv_title'>Let's cut to the chase</h4>
@@ -75,8 +76,8 @@ const Landing = (props) => {
 						className='land_about_pic'
 					/>
 				</Suspense>
-				<p className='land_about_content'>
-					I am a remote developer with 4 years of experience, based out of New
+				<div className='land_about_content'>
+					I am a remote developer with 4 years of experience, hailing from New
 					Delhi, India.
 					<br /> <br />
 					Currently I am accepting freelance projects.
@@ -93,7 +94,7 @@ const Landing = (props) => {
 					<br /> <br />
 					It's my firm belief that we can make our lives better by using just a
 					bit of technology in our daily lives.
-				</p>
+				</div>
 			</div>
 		</section>
 	);
@@ -105,24 +106,33 @@ const Landing = (props) => {
 				<p className='blog_subtitle'>You can read about some</p>
 			</div>
 			<div className='blog_item_container'>
-				<article className='blog_item'>
-					<div className='blog_img_container'>
-						<img
-							src={pro.services[2].img_src}
-							alt='context provider for blog'
-							width='100%'
-							height='60%'
-							className='blog_img'
-						/>
-					</div>
-					<div className='blog_content'>
-						<div className='blog_engagement'>⚝</div>
-						<h4 className='blog_title'>
-							Design is more than just how it looks
-						</h4>
-						<p className='blog_dated'>{Date.now()}</p>
-					</div>
-				</article>
+				{pro.blog &&
+					pro.blog.map((blob) => (
+						<article
+							className='blog_item'
+							key={blob.id}
+							onClick={() =>
+								window.open(
+									blob.link,
+									'_blank' // <- This is what makes it open in a new window.
+								)
+							}>
+							<div className='blog_img_container'>
+								<img
+									src={blob.img_src}
+									alt='context provider for blog'
+									width='100%'
+									height='60%'
+									className='blog_img'
+								/>
+							</div>
+							<div className='blog_content'>
+								<div className='blog_engagement'>⚝</div>
+								<h4 className='blog_title'>{blob.title}</h4>
+								<p className='blog_dated'>{blob.timestamp}</p>
+							</div>
+						</article>
+					))}
 			</div>
 		</section>
 	);
@@ -142,8 +152,49 @@ const Landing = (props) => {
 					onClick={() => alert('ask me out for coffee first!')}>
 					Let's Talk
 				</button> */}
+				{/* <button
+					className='contact_btn'
+					onClick={() =>
+						window.open(
+							'https://www.linkedin.com/in/iadityam/',
+							'_blank' // <- This is what makes it open in a new window.
+						)
+					}>
+					Connect on LinkedIn
+				</button>
+				<button
+					className='contact_btn_wa'
+					onClick={() =>
+						window.open(
+							// `https://api.whatsapp.com/send?phone=917678114688&text=${params.msg}`,
+							getWAString(),
+							'_blank' // <- This is what makes it open in a new window.
+						)
+					}>
+					Chat on Whatsapp
+					
+				</button> */}
+				{/* <span role='img' aria-label='chat emoji'>
+						{' '}
+						🗨
+					</span> */}
 				<button
 					className='contact_btn'
+					onClick={() =>
+						window.open(
+							// `https://api.whatsapp.com/send?phone=917678114688&text=${params.msg}`,
+							getWAString(),
+							'_blank' // <- This is what makes it open in a new window.
+						)
+					}>
+					Chat on Whatsapp
+					{/* <span role='img' aria-label='chat emoji'>
+						{' '}
+						🗨
+					</span> */}
+				</button>
+				<button
+					className='contact_btn_lin'
 					onClick={() =>
 						window.open(
 							'https://www.linkedin.com/in/iadityam/',
@@ -161,6 +212,16 @@ const Landing = (props) => {
 		<footer className='land_footer'>
 			Copyright 2019 Aditya Mishra Creations | Certified member of Sustainable
 			Innovation Foundation
+			<br />
+			Made with{' '}
+			<span
+				role='img'
+				className='hero_beating_heart'
+				style={{ color: 'red' }}
+				aria-label='symbol of heart emoji'>
+				❤
+			</span>{' '}
+			in India
 		</footer>
 	);
 	//#endregion footer
@@ -168,15 +229,35 @@ const Landing = (props) => {
 
 	return (
 		<div className='landing_container'>
-			<Suspense delay={`50`} fallback={<div>Loading more cool stuff</div>}>
-				{/* {hero_old} */}
-				<Hero />
-
+			<Suspense
+				fallback={
+					<div style={{ minHeight: '80vh' }}>
+						Loading images from API. Please wait a sec
+					</div>
+				}>
+				<img
+					src={pic_source}
+					width='100%'
+					height='72vh'
+					alt='backdrop'
+					className='lh_backdrop_temp'
+					// style={{
+					// 	height: `calc(${win_size.height}*.75)`
+					// }}
+				/>
+			</Suspense>
+			<Hero />
+			<Suspense
+				delay={`50`}
+				fallback={
+					<div style={{ minHeight: '50vh' }}>
+						Slow network detected. Loading page content...
+					</div>
+				}>
 				<Services services={pro.services} />
 				{about}
 				{blog}
 				{contact}
-				{/* <OldRef /> */}
 			</Suspense>
 			{footer}
 		</div>
