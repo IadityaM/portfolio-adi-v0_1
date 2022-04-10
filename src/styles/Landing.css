@@ -1,14 +1,27 @@
+:root {
+	--landing_hero_height: 80vh;
+}
+
 .landing_container {
 	width: 100%;
 }
 
 .landing_hero {
-	background-color: var(--col_back_elevated);
-	padding: 5% 4% 4%;
-	text-align: start;
-	display: flex;
-	min-height: 68vh;
-	backdrop-filter: blur(1.2);
+	height: var(--landing_hero_height);
+	display: grid;
+}
+
+.landing_hero_back {
+	grid-row: 1/-1;
+	grid-column: 1/-1;
+	max-height: var(--landing_hero_height);
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	object-fit: cover;
+	/* filter: contrast(120%) brightness(75%) blur(1px); */
+	background-color: var(--col_back_base);
+	color: var(--col_active);
 }
 
 .lh_backdrop_temp {
@@ -23,7 +36,7 @@
 	/* max-height: 72vh; */
 	object-fit: cover;
 
-	filter: contrast(2) brightness(0.75) blur(1.5px);
+	/* filter: contrast(120%) brightness(75%) blur(1px); */
 	/* height: calc(200%); */
 	background-color: var(--col_back_base);
 	color: var(--col_active);
@@ -31,7 +44,22 @@
 }
 
 .hero_main {
+	grid-row: 1/-1;
+	grid-column: 1/-1;
+	max-height: var(--landing_hero_height);
+	/* width: 100%; */
+	padding: 5% 4% 4%;
+	text-align: start;
+	background-color: var(--col_back_elevated);
+	backdrop-filter: blur(1.2);
+	z-index: 1;
+}
+
+.hero_main_content {
+	max-height: 88vh;
 	width: 32ch;
+	height: 100%;
+	margin: 0 auto;
 }
 
 .user_badge {
@@ -326,13 +354,13 @@
 
 .contact_btn {
 	margin: 3vh 0;
-	padding: 1rem 2rem;
+	padding: 1rem 1.4rem;
 	/* background-color: var(--col_action); */
 	/* color: var(--col_back_base); */
 	background: linear-gradient(60deg, var(--col_action), var(--col_action_2));
 	border-radius: 4px;
 	border: solid 2px var(--col_action_2);
-	font-size: 1.4rem;
+	font-size: 1.3rem;
 	font-weight: 400;
 }
 
@@ -342,8 +370,8 @@
 
 .contact_btn_wa {
 	/* margin: 1vh 1vh; */
-	padding: 1rem 2rem;
-	font-size: 1.4rem;
+	padding: 1rem 1.4rem;
+	font-size: 1.3rem;
 	font-weight: 400;
 	background-color: white;
 	border: solid 2px var(--col_whatsapp_2);
@@ -361,8 +389,8 @@
 }
 
 .contact_btn_lin {
-	padding: 1rem 1.4rem;
-	font-size: 1.4rem;
+	padding: 1rem 1.2rem;
+	font-size: 1.3rem;
 	font-weight: 400;
 	background-color: white;
 	border: solid 2px var(--col_lin_1);
@@ -382,16 +410,19 @@
 
 @media only screen and (min-width: 481px) {
 	.landing_hero {
-		/* height: 72vh; */
 	}
 
-	.lh_backdrop_temp {
+	/* .lh_backdrop_temp {
 		min-height: calc(75vh);
 		object-position: 0 75%;
-	}
+	} */
 
 	.hero_main {
-		margin: 0 30%;
+		margin: 0 auto;
+	}
+
+	.hero_main_content {
+		margin: 0 auto;
 	}
 
 	.hero_title {
@@ -518,8 +549,8 @@
 
 	.land_about_content {
 		width: 40%;
-		font-size: 1.2rem;
-		line-height: 1.3em;
+		font-size: 1rem;
+		line-height: 1.4em;
 	}
 
 	.land_about_pic {

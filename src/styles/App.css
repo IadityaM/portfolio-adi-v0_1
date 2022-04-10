@@ -1,6 +1,7 @@
 :root {
 	/* Colors */
-	--col_back_base: #f2f2f2;
+	/* --col_back_base: #f2f2f2; */
+	--col_back_base: rgb(232, 232, 240);
 	--col_back_elevated: rgba(250, 250, 250, 0.6);
 	--col_back_ele_opaque: rgba(250, 250, 250, 1);
 	--col_active: #1a42f4;

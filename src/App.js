@@ -1,8 +1,10 @@
 import React, { lazy, Suspense } from 'react';
 import { Router } from '@reach/router';
 import { Helmet } from 'react-helmet';
+import ReactGA from 'react-ga';
 
 import './styles/App.css';
+
 import Navbar from './components/navigation/Navbar';
 import LandingBack from './pages/LandingBack';
 
@@ -20,8 +22,22 @@ const displayRoutes = {
 	// Apply: { name: 'Apply', path: '/apply-now' },
 };
 //#endregion
+const trackingId = 'G-X2XW78SJ9J'; // Replace with your Google Analytics tracking ID
 
 function App() {
+	ReactGA.initialize(trackingId);
+
+	React.useEffect(() => {
+		(function loadHubSpot() {
+			const d = document;
+			const s = d.createElement('script');
+
+			s.src = 'https://js.hs-scripts.com/7696027.js';
+			s.async = true;
+			d.getElementsByTagName('body')[0].appendChild(s);
+		})();
+	}, []);
+
 	return (
 		<div className='app'>
 			<Helmet>

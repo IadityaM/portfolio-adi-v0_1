@@ -22,29 +22,48 @@ function Hero(props) {
 	return (
 		<section className='landing_hero'>
 			<div className='hero_main'>
-				<UserBadge
-					name='Aditya Mishra'
-					desig='Developer + Designer + Entrepreneur'
-				/>
-				<h1 className='hero_title'>Product Developer</h1>
-				<p className='hero_subtitle'>
-					with the{' '}
-					<span
-						role='img'
-						className='hero_beating_heart'
-						aria-label='symbol of heart emoji'>
-						❤
-					</span>{' '}
-					<span className='active_text'>of a designer</span>.
-				</p>
-				<MyQuote source='Aditya'>
-					To design is to tell a story. In product design it's all about telling
-					the story that people want - i.e.{' '}
-					<span className='quote_emphasis'>
-						meaningful, enjoyable, concise & worth re-telling.
-					</span>
-				</MyQuote>
+				<div className='hero_main_content'>
+					<UserBadge
+						name='Aditya Mishra'
+						desig='Developer + Designer + Entrepreneur'
+					/>
+					<h1 className='hero_title'>Product Developer</h1>
+					<p className='hero_subtitle'>
+						with the{' '}
+						<span
+							role='img'
+							className='hero_beating_heart'
+							aria-label='symbol of heart emoji'>
+							❤
+						</span>{' '}
+						<span className='active_text'>of a designer</span>.
+					</p>
+					<MyQuote source='Aditya'>
+						To design is to tell a story. In product design it's all about
+						telling the story that people want - i.e.{' '}
+						<span className='quote_emphasis'>
+							meaningful, enjoyable, concise & worth re-telling.
+						</span>
+					</MyQuote>
+				</div>
 			</div>
+			<Suspense
+				fallback={
+					<div style={{ minHeight: '80vh' }}>
+						Loading images from API. Please wait a sec
+					</div>
+				}>
+				<img
+					src={pic_source}
+					width='100%'
+					height='72vh'
+					alt='backdrop'
+					className='landing_hero_back'
+					// style={{
+					// 	height: `calc(${win_size.height}*.75)`
+					// }}
+				/>
+			</Suspense>
 		</section>
 	);
 }
@@ -77,7 +96,7 @@ const Landing = (props) => {
 					/>
 				</Suspense>
 				<div className='land_about_content'>
-					I am a remote developer with 4 years of experience, hailing from New
+					I am a remote developer with 8 years of experience, hailing from New
 					Delhi, India.
 					<br /> <br />
 					Currently I am accepting freelance projects.
@@ -88,13 +107,15 @@ const Landing = (props) => {
 					I strive to ensure both parameters are met by using my background in
 					development, design, evangelism and Human-Computer-Interface research.
 					<br /> <br />
-					I'm a Computer Science Engineer by education (batch of 2017) and have
-					been working with startups as a graphics designer and later as a
-					developer since I was in high school (circa 2011)
+					I'm a Computer Science Engineer by education (batch of 2013-17) and have
+					been working with startups as a developer since 2014 and as a UI Designer since 2011
 					<br /> <br />
 					It's my firm belief that we can make our lives better by using just a
-					bit of technology in our daily lives.
-				</div>
+					bit of technology in our lives.
+					<br /> <br />
+					The future of commerce is bound to be set in Technology & Technology enabled products and sevices. 
+					And I am here to invite you to be a part of that future by helping you make your business future-ready 
+					and to turn your vuable ideas into robust, modern products.
 			</div>
 		</section>
 	);
@@ -142,8 +163,11 @@ const Landing = (props) => {
 			<div className='contact_copy'>
 				<h4 className='contact_title'>Wondering what's next?</h4>
 				<p className='contact_msg'>
-					You made it till the end of the page. But.. there's still much to talk
-					about. Let's get in touch and start a conversation.
+					You made it till the end of the page.
+					<br />
+					But.. there's still much to talk about.
+					<br />
+					Let's get in touch and start a conversation.
 					<br />
 					<br />I can't wait to hear from you!
 				</p>
@@ -210,18 +234,21 @@ const Landing = (props) => {
 	//#region footer
 	const footer = (
 		<footer className='land_footer'>
-			Copyright 2019 Aditya Mishra Creations | Certified member of Sustainable
-			Innovation Foundation
-			<br />
-			Made with{' '}
-			<span
-				role='img'
-				className='hero_beating_heart'
-				style={{ color: 'red' }}
-				aria-label='symbol of heart emoji'>
-				❤
-			</span>{' '}
-			in India
+			<div className=''>
+				Made with{' '}
+				<span
+					role='img'
+					className='hero_beating_heart'
+					style={{ color: 'red' }}
+					aria-label='symbol of heart emoji'>
+					❤
+				</span>{' '}
+				in India
+			</div>
+			<div className=''>
+				Copyright 2019 Aditya Mishra Creations | Certified member of Sustainable
+				Innovation Foundation
+			</div>
 		</footer>
 	);
 	//#endregion footer
@@ -229,7 +256,7 @@ const Landing = (props) => {
 
 	return (
 		<div className='landing_container'>
-			<Suspense
+			{/* <Suspense
 				fallback={
 					<div style={{ minHeight: '80vh' }}>
 						Loading images from API. Please wait a sec
@@ -245,7 +272,7 @@ const Landing = (props) => {
 					// 	height: `calc(${win_size.height}*.75)`
 					// }}
 				/>
-			</Suspense>
+			</Suspense> */}
 			<Hero />
 			<Suspense
 				delay={`50`}
