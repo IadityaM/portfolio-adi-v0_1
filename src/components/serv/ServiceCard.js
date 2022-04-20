@@ -25,6 +25,7 @@ function ServiceCard({
 							alt={img_cred}
 							width='100%'
 							height='auto'
+							loading='lazy'
 						/>
 					}>
 					<img
@@ -33,6 +34,7 @@ function ServiceCard({
 						alt={img_cred}
 						width='100%'
 						height='auto'
+						// loading='lazy'
 					/>
 				</Suspense>
 				<div className='serv_card_details'>

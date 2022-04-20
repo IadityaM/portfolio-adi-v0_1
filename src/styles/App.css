@@ -159,11 +159,16 @@
 	color: var(--col_active); */
 	/* border-left: solid 2px var(--col_active); */
 	/* border-radius: 2rem; */
-	box-shadow: 0 1px 3px rgba(34, 34, 34, 0.2);
+	box-shadow: 0 2px 3px rgba(34, 34, 34, 0.3);
 	font-family: 'Poppins';
-	font-size: 0.8rem;
+	font-size: 0.9rem;
 	font-weight: 600;
 	letter-spacing: 1.2px;
+	/* border: solid 1px #ff1744; */
+}
+
+.btn_cta:hover {
+	border-radius: 8px 0;
 }
 
 @media only screen and (min-width: 481px) {

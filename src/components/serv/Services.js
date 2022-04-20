@@ -9,7 +9,7 @@ function Services({ services }) {
 	return (
 		<section className='land_services'>
 			<div className='serv_director'>
-				<p className='serv_title'> Let's cut to the chase.</p>
+				<p className='serv_title'> Let us cut to the chase.</p>
 			</div>
 			<div className='serv_card_layout'>
 				<div className='serv_controller'>

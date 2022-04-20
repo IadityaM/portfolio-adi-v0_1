@@ -22,6 +22,7 @@
 	/* filter: contrast(120%) brightness(75%) blur(1px); */
 	background-color: var(--col_back_base);
 	color: var(--col_active);
+	border-radius: 0 0 12px 12px;
 }
 
 .lh_backdrop_temp {
@@ -156,11 +157,11 @@
 	border-left: solid 2px var(--col_active);
 	padding: 1vh 3vh;
 	color: var(--col_text_quote);
-	filter: drop-shadow(0.1px 0.1px 0.1px var(--col_text_quote_shadow));
+	/* filter: drop-shadow(0.1px 0.1px 0.1px var(--col_text_quote_shadow)); */
 	/* box-shadow: inset 2px 0 4px var(--col_action_2_shadow); */
 	/* padding-left: 2vh; */
 	font-size: 0.8rem;
-	line-height: 1.3em;
+	line-height: 1.8em;
 	letter-spacing: 0.5px;
 	font-style: italic;
 }
@@ -550,7 +551,7 @@
 	.land_about_content {
 		width: 40%;
 		font-size: 1rem;
-		line-height: 1.4em;
+		line-height: 1.6em;
 	}
 
 	.land_about_pic {

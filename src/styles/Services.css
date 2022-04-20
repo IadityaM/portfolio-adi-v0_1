@@ -177,6 +177,7 @@
 
 .serv_card_cta:hover {
 	/* box-shadow: 4px 4px 8px rgba(20, 20, 20, 0.16); */
+	border-radius: 16px 0;
 }
 
 .serv_card_exp {
@@ -216,7 +217,7 @@
 }
 
 .proj_tag {
-	padding: 8px 16px;
+	padding: 10px 16px;
 	margin: 0 2vh 1vh 0;
 	cursor: pointer;
 	/* min-width: fit-content */
@@ -237,6 +238,22 @@
 .proj_tag:hover {
 	/* background-color: var(--col_active);
 	color: var(--col_active_text); */
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+	text-decoration-color: var(--col_action);
+	box-shadow: 2px 2px 6px var(--col_active_2_shadow);
+	background-color: var(--col_active_2);
+	color: #f0f8ff;
+}
+
+.about_title {
+	/* border-bottom: solid 2px var(--col_action);
+	display: inline-block; */
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-thickness: 3px;
+	text-decoration-color: var(--col_active_2);
+	font-weight: bolder;
 }
 
 @media only screen and (min-width: 481px) {
@@ -309,6 +326,7 @@
 		background-color: var(--col_active_2);
 		color: var(--col_back_ele_opaque);
 		font-weight: 600;
+		/* letter-spacing: 1.1px; */
 	}
 
 	.serv-selected {

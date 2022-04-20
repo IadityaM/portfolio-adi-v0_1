@@ -101,21 +101,25 @@ const Landing = (props) => {
 					<br /> <br />
 					Currently I am accepting freelance projects.
 					<h3 className='about_title'>About Me</h3>
-					I like building enjoyable products. Things that either make your life
-					easier or are delightful and fun to use.
+					I like building enjoyable products. <br />
+					Things that either make your life easier <br />
+					or are delightful and fun to use.
 					<br /> <br />
 					I strive to ensure both parameters are met by using my background in
 					development, design, evangelism and Human-Computer-Interface research.
 					<br /> <br />
-					I'm a Computer Science Engineer by education (batch of 2013-17) and have
-					been working with startups as a developer since 2014 and as a UI Designer since 2011
+					I'm a Computer Science Engineer by education (batch of 2013-17) and
+					have been working with startups as a developer since 2014 and as a UI
+					Designer since 2011
 					<br /> <br />
 					It's my firm belief that we can make our lives better by using just a
 					bit of technology in our lives.
 					<br /> <br />
-					The future of commerce is bound to be set in Technology & Technology enabled products and sevices. 
-					And I am here to invite you to be a part of that future by helping you make your business future-ready 
-					and to turn your vuable ideas into robust, modern products.
+					The future of commerce is bound to be set in Technology & Technology
+					enabled products and sevices. And I am here to invite you to be a part
+					of that future by helping you make your business future-ready and to
+					turn your vuable ideas into robust, modern products.
+				</div>
 			</div>
 		</section>
 	);
