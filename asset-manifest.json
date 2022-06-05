@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio-adi-v0_1/static/css/main.83203425.css",
-    "main.js": "/portfolio-adi-v0_1/static/js/main.325a775e.js",
-    "static/css/337.e4ad1166.chunk.css": "/portfolio-adi-v0_1/static/css/337.e4ad1166.chunk.css",
-    "static/js/337.ee8be727.chunk.js": "/portfolio-adi-v0_1/static/js/337.ee8be727.chunk.js",
+    "main.css": "/portfolio-adi-v0_1/static/css/main.a4a0531d.css",
+    "main.js": "/portfolio-adi-v0_1/static/js/main.10287359.js",
+    "static/css/360.69f2224e.chunk.css": "/portfolio-adi-v0_1/static/css/360.69f2224e.chunk.css",
+    "static/js/360.5eae604b.chunk.js": "/portfolio-adi-v0_1/static/js/360.5eae604b.chunk.js",
     "static/js/523.ed5222dd.chunk.js": "/portfolio-adi-v0_1/static/js/523.ed5222dd.chunk.js",
-    "static/css/264.44c09928.chunk.css": "/portfolio-adi-v0_1/static/css/264.44c09928.chunk.css",
+    "static/css/264.97eb87c9.chunk.css": "/portfolio-adi-v0_1/static/css/264.97eb87c9.chunk.css",
     "static/js/264.9874a5d0.chunk.js": "/portfolio-adi-v0_1/static/js/264.9874a5d0.chunk.js",
     "static/media/adi_dnd_min.svg": "/portfolio-adi-v0_1/static/media/adi_dnd_min.7d1f925006ffe768f853dd145b37781f.svg",
+    "static/media/adi.png": "/portfolio-adi-v0_1/static/media/adi.4f82e17484f1d966bba5.png",
     "static/media/node_logo.svg": "/portfolio-adi-v0_1/static/media/node_logo.dd47e26ed1d7dddf018e5cbffc40f76d.svg",
     "static/media/react-logo.svg": "/portfolio-adi-v0_1/static/media/react-logo.3adc4d153dba4c791b00838e53dc0410.svg",
     "static/media/cpp_logo.svg": "/portfolio-adi-v0_1/static/media/cpp_logo.2441702dffa95ca3c92c20816e386640.svg",
@@ -18,16 +19,16 @@
     "static/media/android_robot.svg": "/portfolio-adi-v0_1/static/media/android_robot.3726deccee230986f9a46762165117d1.svg",
     "static/media/js_logo_unofficial_2.svg": "/portfolio-adi-v0_1/static/media/js_logo_unofficial_2.61c1fa6b2ee4eb8ce8d0e0c25ab67854.svg",
     "static/media/html_logo.svg": "/portfolio-adi-v0_1/static/media/html_logo.cf51b3879972e0e8c0c9be2135162847.svg",
-    "main.83203425.css.map": "/portfolio-adi-v0_1/static/css/main.83203425.css.map",
-    "main.325a775e.js.map": "/portfolio-adi-v0_1/static/js/main.325a775e.js.map",
-    "337.e4ad1166.chunk.css.map": "/portfolio-adi-v0_1/static/css/337.e4ad1166.chunk.css.map",
-    "337.ee8be727.chunk.js.map": "/portfolio-adi-v0_1/static/js/337.ee8be727.chunk.js.map",
+    "main.a4a0531d.css.map": "/portfolio-adi-v0_1/static/css/main.a4a0531d.css.map",
+    "main.10287359.js.map": "/portfolio-adi-v0_1/static/js/main.10287359.js.map",
+    "360.69f2224e.chunk.css.map": "/portfolio-adi-v0_1/static/css/360.69f2224e.chunk.css.map",
+    "360.5eae604b.chunk.js.map": "/portfolio-adi-v0_1/static/js/360.5eae604b.chunk.js.map",
     "523.ed5222dd.chunk.js.map": "/portfolio-adi-v0_1/static/js/523.ed5222dd.chunk.js.map",
-    "264.44c09928.chunk.css.map": "/portfolio-adi-v0_1/static/css/264.44c09928.chunk.css.map",
+    "264.97eb87c9.chunk.css.map": "/portfolio-adi-v0_1/static/css/264.97eb87c9.chunk.css.map",
     "264.9874a5d0.chunk.js.map": "/portfolio-adi-v0_1/static/js/264.9874a5d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.83203425.css",
-    "static/js/main.325a775e.js"
+    "static/css/main.a4a0531d.css",
+    "static/js/main.10287359.js"
   ]
 }
