@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio-adi-v0_1/static/css/main.799e5063.css",
-    "main.js": "/portfolio-adi-v0_1/static/js/main.751b0a77.js",
-    "static/css/360.e7c3cfde.chunk.css": "/portfolio-adi-v0_1/static/css/360.e7c3cfde.chunk.css",
+    "main.js": "/portfolio-adi-v0_1/static/js/main.dfdf4798.js",
+    "static/css/360.8eb675d3.chunk.css": "/portfolio-adi-v0_1/static/css/360.8eb675d3.chunk.css",
     "static/js/360.4bcb7c31.chunk.js": "/portfolio-adi-v0_1/static/js/360.4bcb7c31.chunk.js",
     "static/js/523.ed5222dd.chunk.js": "/portfolio-adi-v0_1/static/js/523.ed5222dd.chunk.js",
     "static/css/264.f31764c7.chunk.css": "/portfolio-adi-v0_1/static/css/264.f31764c7.chunk.css",
@@ -20,8 +20,8 @@
     "static/media/js_logo_unofficial_2.svg": "/portfolio-adi-v0_1/static/media/js_logo_unofficial_2.61c1fa6b2ee4eb8ce8d0e0c25ab67854.svg",
     "static/media/html_logo.svg": "/portfolio-adi-v0_1/static/media/html_logo.cf51b3879972e0e8c0c9be2135162847.svg",
     "main.799e5063.css.map": "/portfolio-adi-v0_1/static/css/main.799e5063.css.map",
-    "main.751b0a77.js.map": "/portfolio-adi-v0_1/static/js/main.751b0a77.js.map",
-    "360.e7c3cfde.chunk.css.map": "/portfolio-adi-v0_1/static/css/360.e7c3cfde.chunk.css.map",
+    "main.dfdf4798.js.map": "/portfolio-adi-v0_1/static/js/main.dfdf4798.js.map",
+    "360.8eb675d3.chunk.css.map": "/portfolio-adi-v0_1/static/css/360.8eb675d3.chunk.css.map",
     "360.4bcb7c31.chunk.js.map": "/portfolio-adi-v0_1/static/js/360.4bcb7c31.chunk.js.map",
     "523.ed5222dd.chunk.js.map": "/portfolio-adi-v0_1/static/js/523.ed5222dd.chunk.js.map",
     "264.f31764c7.chunk.css.map": "/portfolio-adi-v0_1/static/css/264.f31764c7.chunk.css.map",
@@ -29,6 +29,6 @@
   },
   "entrypoints": [
     "static/css/main.799e5063.css",
-    "static/js/main.751b0a77.js"
+    "static/js/main.dfdf4798.js"
   ]
 }
