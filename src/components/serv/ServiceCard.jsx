@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import ProjTags from '../tags/ProjTags';
 import { getWAString } from '../../uires/port';
 
@@ -58,7 +58,9 @@ function ServiceCard({
 			</article>
 			<div className='serv_card_exp'>
 				<p className='card_exp_label'>
-					Relevant Experience > <span className='exp_design'>{title_long}</span>
+					Relevant Experience {'> '}
+					<span className='exp_design'>{title_long}</span>
+					{/* <span>{projects.length}</span> */}
 				</p>
 				<ProjTags id_list={projects} />
 			</div>
@@ -66,15 +68,15 @@ function ServiceCard({
 	);
 }
 
-ServiceCard.propTypes = {
-	intro: PropTypes.string.isRequired,
-	eg: PropTypes.string.isRequired,
-	description: PropTypes.string.isRequired,
-	cta: PropTypes.string.isRequired,
-	title_long: PropTypes.string.isRequired,
-	projects: PropTypes.array.isRequired,
-	img_src: PropTypes.string.isRequired,
-	img_cred: PropTypes.string,
-};
+// ServiceCard.propTypes = {
+// 	intro: PropTypes.string.isRequired,
+// 	eg: PropTypes.string.isRequired,
+// 	description: PropTypes.string.isRequired,
+// 	cta: PropTypes.string.isRequired,
+// 	title_long: PropTypes.string.isRequired,
+// 	projects: PropTypes.array.isRequired,
+// 	img_src: PropTypes.string.isRequired,
+// 	img_cred: PropTypes.string,
+// };
 
 export default ServiceCard;

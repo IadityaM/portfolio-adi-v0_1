@@ -9,7 +9,7 @@ import MyQuote from '../components/MyQuote';
 // import genericLogo from '../uires/logos/node_logo.svg';
 // import OldRef from '../zxtras/OldRef';
 
-import pic_launcher from '../uires/svgs/adi_maker_launcher.svg';
+import pic_launcher from '../uires/svgs/coding moonshots.svg';
 // import { useWindowSize } from '../hooks/commonHooks';
 // import pic_worker from '../uires/svgs/undraw_work_together.svg';
 
@@ -40,8 +40,8 @@ function Hero(props) {
 					</p>
 					<MyQuote source='Aditya'>
 						To design is to tell a story. In product design it's all about
-						telling the story that people want - i.e.{' '}
-						<span className='quote_emphasis'>
+						telling the story that people will remember - i.e.{' '}
+						<span className='quote_emphasis active'>
 							meaningful, enjoyable, concise & worth re-telling.
 						</span>
 					</MyQuote>
@@ -96,29 +96,63 @@ const Landing = (props) => {
 					/>
 				</Suspense>
 				<div className='land_about_content'>
-					I am a remote developer with 8 years of experience, hailing from New
-					Delhi, India.
-					<br /> <br />
-					Currently I am accepting freelance projects.
-					<h3 className='about_title'>About Me</h3>
-					I like building enjoyable products. <br />
-					Things that either make your life easier <br />
-					or are delightful and fun to use.
-					<br /> <br />
-					I strive to ensure both parameters are met by using my background in
-					development, design, evangelism and Human-Computer-Interface research.
-					<br /> <br />
-					I'm a Computer Science Engineer by education (batch of 2013-17) and
-					have been working with startups as a developer since 2014 and as a UI
-					Designer since 2011
-					<br /> <br />
-					It's my firm belief that we can make our lives better by using just a
-					bit of technology in our lives.
-					<br /> <br />
-					The future of commerce is bound to be set in Technology & Technology
-					enabled products and sevices. And I am here to invite you to be a part
-					of that future by helping you make your business future-ready and to
-					turn your vuable ideas into robust, modern products.
+					<h3 className='blog_head'>About Me</h3>
+					<p className='land_about_paras'>
+						I am a{' '}
+						<span className='active'>
+							product leader, rockstar app developer, team builder, and career
+							coach
+						</span>{' '}
+						with 9+ years of experience, from New Delhi, India.
+					</p>
+					{/* <i className='hint'>Currently I am accepting freelance projects.</i> */}
+					<i className='land_about_paras hint'>
+						Accepting Remote CTO / Full Stack Dev Projects
+					</i>
+					{/* <h3 className='about_title'>About Me</h3> */}
+					<p className='land_about_paras'>
+						I'm a user experience first developer:
+						<b className='active'> using Design Thinking to </b> help you{' '}
+						<b className='active'>build products that your users love. </b>
+						<br />
+						<br />
+						Making things that{' '}
+						<span className='active'> make your life easier </span>
+						or <span className='active'>are delightful & fun</span> to use.
+					</p>
+					{/* <br /> <br /> */}
+					<p className='land_about_paras'>
+						I strive to ensure both usefullness and joy are the pillars of
+						applications built by me - using my background in product
+						engineering, development, design, evangelism and
+						Human-Computer-Interface research.
+					</p>
+					<p className='land_about_paras'>
+						I'm a Computer Science Engineer by education (B.Tech. batch of 2017)
+						but I have been working with startups as{' '}
+						<span className='active'>a developer since 2014</span> and as a UI
+						Designer since 2011
+					</p>
+					<p className='land_about_paras'>
+						I firmly believe that we can{' '}
+						<span className='active'>make our lives significantly better</span>{' '}
+						by using bits of technology at the right places in our daily lives.
+					</p>
+					<p className='land_about_paras'>
+						The future of modern commerce is bound to be set in Computer
+						Technology & AI enabled products & sevices.
+						<br />
+					</p>
+					<p className='land_about_paras'>
+						<b className=''>
+							I am here to invite you to be a part of that future by :-
+						</b>{' '}
+						<br />
+						<li>1. helping you make your business future-ready; & </li>
+						<li>
+							2. turning your valueable ideas into robust, modern products.
+						</li>
+					</p>
 				</div>
 			</div>
 		</section>
@@ -127,7 +161,10 @@ const Landing = (props) => {
 	const blog = (
 		<section className='land_blog'>
 			<div className='blog_msg'>
-				<h3 className='blog_head'>I am open to contrarian ideas & opinions</h3>
+				<h3 className='blog_head'>
+					<span className='active'>I am open</span> to fun ideas & fresh
+					opinions
+				</h3>
 				<p className='blog_subtitle'>You can read about some</p>
 			</div>
 			<div className='blog_item_container'>
@@ -165,15 +202,17 @@ const Landing = (props) => {
 	const contact = (
 		<section className='land_contact'>
 			<div className='contact_copy'>
-				<h4 className='contact_title'>Wondering what's next?</h4>
+				<h4 className='contact_title'>
+					Wondering <span className='active'> what's next?</span>
+				</h4>
 				<p className='contact_msg'>
-					You made it till the end of the page.
+					We can start turning your ideas 💡 into reality.
 					<br />
-					But.. there's still much to talk about.
+					Let's get in touch & start building your products.
 					<br />
-					Let's get in touch and start a conversation.
 					<br />
-					<br />I can't wait to hear from you!
+					<i className=''>Start now, so you can launch ASAP.</i>
+					<br />I can't wait to hear 💬 from you!
 				</p>
 				{/* <button
 					className='contact_btn'

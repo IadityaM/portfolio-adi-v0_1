@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import ServiceCard from './ServiceCard';
 
 import '../../styles/Services.css';
 
 function Services({ services }) {
 	const [activeId, setactiveId] = useState(1);
+
 	return (
 		<section className='land_services'>
 			<div className='serv_director'>
@@ -41,8 +42,8 @@ function Services({ services }) {
 	);
 }
 
-Services.propTypes = {
-	services: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+// Services.propTypes = {
+// 	services: PropTypes.arrayOf(PropTypes.object).isRequired,
+// };
 
 export default Services;

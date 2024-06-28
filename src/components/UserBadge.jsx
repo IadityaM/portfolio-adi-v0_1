@@ -1,7 +1,11 @@
 import React, { Suspense } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-function UserBadge({ img_src, name, desig }) {
+function UserBadge({
+	img_src = 'https://avatars2.githubusercontent.com/u/13042657?s=460&v=4',
+	name,
+	desig,
+}) {
 	return (
 		<div className='user_badge'>
 			<Suspense delay='50ms' fallback={<>Loading the cool stuff</>}>
@@ -21,14 +25,14 @@ function UserBadge({ img_src, name, desig }) {
 	);
 }
 
-UserBadge.propTypes = {
-	img_src: PropTypes.string,
-	name: PropTypes.string.isRequired,
-	desig: PropTypes.string.isRequired,
-};
+// UserBadge.propTypes = {
+// 	img_src: PropTypes.string,
+// 	name: PropTypes.string.isRequired,
+// 	desig: PropTypes.string.isRequired,
+// };
 
-UserBadge.defaultProps = {
-	img_src: `https://avatars2.githubusercontent.com/u/13042657?s=460&v=4`,
-};
+// UserBadge.defaultProps = {
+// 	img_src: `https://avatars2.githubusercontent.com/u/13042657?s=460&v=4`,
+// };
 
 export default UserBadge;

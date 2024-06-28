@@ -1,13 +1,23 @@
 :root {
-	--landing_hero_height: 80vh;
+	--landing_hero_height: 80svh;
 }
+
+.hint {
+	filter: contrast(1.25) brightness(1.5);
+	color: hsl(153, 82%, 20%);
+}
+
+.active {
+	color: var(--col_active_2);
+}
+
 
 .landing_container {
 	width: 100%;
 }
 
 .landing_hero {
-	height: var(--landing_hero_height);
+	max-height: var(--landing_hero_height);
 	display: grid;
 }
 
@@ -52,14 +62,14 @@
 	padding: 5% 4% 4%;
 	text-align: start;
 	background-color: var(--col_back_elevated);
-	backdrop-filter: blur(1.2);
+	backdrop-filter: blur(8px);
 	z-index: 1;
 }
 
 .hero_main_content {
-	max-height: 88vh;
-	width: 32ch;
+	max-height: 88svh;
 	height: 100%;
+	width: 32ch;
 	margin: 0 auto;
 }
 
@@ -107,6 +117,7 @@
 	font-size: var(--size_text_head_1_mob);
 	line-height: 1.1em;
 	letter-spacing: -1px;
+	margin: 1.5rem 0 .5rem;
 }
 
 .hero_subtitle {
@@ -124,14 +135,17 @@
 }
 
 @keyframes beatHeart {
+
 	30%,
 	60% {
 		transform: scale(1.2, 1.2);
 	}
+
 	15%,
 	45% {
 		transform: scale(0.9, 0.92);
 	}
+
 	0%,
 	90%,
 	100% {
@@ -143,9 +157,11 @@
 	0% {
 		transform: scale(1);
 	}
+
 	20% {
 		transform: scale(1.25);
 	}
+
 	40% {
 		transform: scale(1.5);
 	}
@@ -161,9 +177,12 @@
 	/* box-shadow: inset 2px 0 4px var(--col_action_2_shadow); */
 	/* padding-left: 2vh; */
 	font-size: 0.8rem;
+	font-weight: 600;
 	line-height: 1.8em;
 	letter-spacing: 0.5px;
-	font-style: italic;
+	font-family: 'Segoe UI', 'Open Sans', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	/* backdrop-filter: blur(12px); */
+	/* font-style: italic; */
 }
 
 .quote_emphasis {
@@ -176,7 +195,7 @@
 	/* height: 180vh; */
 	text-align: start;
 	position: relative;
-	filter: drop-shadow(0px 2px 6px rgba(20, 20, 20, 0.16));
+
 	display: grid;
 	grid-template-rows: 1fr 8fr 1fr;
 	grid-template-columns: 1fr 14fr 1fr;
@@ -197,6 +216,7 @@
 	background-color: var(--col_action);
 	background: linear-gradient(to top, var(--col_action), var(--col_action_2));
 	clip-path: polygon(0 0%, 100% 6%, 100% 100%, 0% 94%);
+	filter: drop-shadow(0px 2px 6px hsla(0, 0%, 8%, 0.16));
 	z-index: 0;
 }
 
@@ -219,7 +239,7 @@
 	/* min-height: 60vh; */
 	background-color: var(--col_back_ele_opaque);
 	clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%);
-
+	filter: drop-shadow(2px 4px 6px hsla(0, 0%, 8%, 0.16));
 	z-index: 1;
 }
 
@@ -246,8 +266,7 @@
 	width: 100%;
 }
 
-.blog_subtitle {
-}
+.blog_subtitle {}
 
 .blog_item_container {
 	width: 100%;
@@ -260,7 +279,8 @@
 }
 
 .blog_item {
-	width: 240px;
+	/* width: 240px; */
+	width: clamp(240px, 100%, 260px);
 	margin-right: 1vw;
 	margin-bottom: 2vh;
 	display: flex;
@@ -268,6 +288,7 @@
 	background-color: var(--col_back_ele_opaque);
 	box-shadow: 0 2px 4px rgba(34, 34, 34, 0.2);
 	cursor: pointer;
+	text-wrap: balance;
 }
 
 .blog_item:hover {
@@ -346,6 +367,7 @@
 	color: var(--col_text_head);
 	font-size: 3rem;
 	line-height: 1.1em;
+	text-wrap: balance;
 }
 
 .contact_msg {
@@ -385,7 +407,7 @@
 	); */
 }
 
-.contact_btn_wa > span {
+.contact_btn_wa>span {
 	color: var(--col_whatsapp_2);
 }
 
@@ -409,9 +431,8 @@
 	font-size: 0.8rem;
 }
 
-@media only screen and (min-width: 481px) {
-	.landing_hero {
-	}
+@media only screen and (min-width: 500px) {
+	.landing_hero {}
 
 	/* .lh_backdrop_temp {
 		min-height: calc(75vh);
@@ -422,9 +443,9 @@
 		margin: 0 auto;
 	}
 
-	.hero_main_content {
+	/* .hero_main_content {
 		margin: 0 auto;
-	}
+	} */
 
 	.hero_title {
 		/* width: 30%; */
@@ -443,7 +464,8 @@
 	.quote_container {
 		margin: unset 0;
 		width: 92%;
-		font-size: 1rem;
+		/* font-size: 1rem; */
+		font-size: 1.5rem;
 		line-height: 1.4em;
 	}
 
@@ -467,10 +489,19 @@
 	}
 
 	.land_about_main {
-		padding: 12vh 8%;
+		padding: 12svh 8%;
 		/* flex-direction: row-reverse; */
 		justify-content: space-between;
 		clip-path: polygon(0 8%, 100% 0%, 100% 92%, 0% 100%);
+	}
+
+
+	.land_about_paras {
+		width: 100%;
+		text-wrap: balance;
+		font-size: 1.15rem;
+		line-height: 1.7em;
+		font-weight: 300;
 	}
 
 	/* .land_about_content {
@@ -498,7 +529,8 @@
 
 	.blog_head {
 		font-size: 3rem;
-		line-height: 1.1em;
+		line-height: 1.5em;
+		text-wrap: balance;
 	}
 
 	.blog_subtitle {

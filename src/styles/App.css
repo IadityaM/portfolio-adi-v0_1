@@ -11,15 +11,15 @@
 	--col_active_shadow_lite: rgba(26, 66, 244, 0.16);
 	--col_active_2_shadow: rgba(65, 98, 246, 0.3);
 	--col_active_text: var(--col_back_base);
-	--col_action: #fff176;
-	--col_action_2: #ffee5c;
+	--col_action: hsl(54, 100%, 73%);
+	--col_action_2: hsl(54, 100%, 50%);
 	--col_action_shadow: rgba(255, 241, 118, 0.16);
 	--col_action_2_shadow: rgba(255, 238, 92, 0.4);
 	--col_action_text: var(--col_text_head);
 	--col_text_head: rgb(50, 50, 50);
 	--col_text_code: rgb(16, 32, 40);
 	--col_text_sub: rgba(16, 32, 40, 0.8);
-	--col_text_quote: rgba(40, 40, 40, 0.75);
+	--col_text_quote: hsla(0, 0%, 4%, 1);
 	--col_text_quote_shadow: rgba(40, 40, 40, 0.5);
 
 	--col_whatsapp_1: rgb(1, 230, 117);
@@ -103,6 +103,11 @@
 }
 
 .app_header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
 	height: var(--size_header_height);
 	width: 100%;
 	display: flex;
@@ -112,10 +117,19 @@
 	align-items: center;
 	padding: 1vh 4vh;
 	box-shadow: 0 3px 6px rgba(34, 34, 34, 0.16);
-	z-index: 10;
+	z-index: 100;
+	background-color: hsla(0, 0%, 100%, 0.75);
+	backdrop-filter: blur(12px);
+
+}
+
+.links_container {
+	display: flex;
+	align-items: center;
 }
 
 .app_container {
+	padding-top: calc(var(--size_header_height) + 4px);
 	min-height: 80vh;
 	width: 100%;
 	position: relative;
@@ -148,18 +162,18 @@
 }
 
 .pages_container {
-	min-height: 90vh;
+	min-height: 90svh;
 }
 
 .btn_cta {
-	padding: 0.5rem 1rem;
+	padding: 0.5rem .75rem;
 	background: linear-gradient(45deg, var(--col_action), var(--col_action_2));
 	border-radius: 4px;
 	/* background-color: var(--col_back_elevated);
 	color: var(--col_active); */
 	/* border-left: solid 2px var(--col_active); */
 	/* border-radius: 2rem; */
-	box-shadow: 0 2px 3px rgba(34, 34, 34, 0.3);
+	/* box-shadow: 0 2px 3px rgba(34, 34, 34, 0.3); */
 	font-family: 'Poppins';
 	font-size: 0.9rem;
 	font-weight: 600;
@@ -171,11 +185,26 @@
 	border-radius: 8px 0;
 }
 
-@media only screen and (min-width: 481px) {
+@media only screen and (min-width: 500px) {
 	.btn_cta {
-		background-color: var(--col_back_elevated);
-		padding: 0.5rem 1rem;
-		font-size: 0.8rem;
-		letter-spacing: 1.2px;
+		/* background-color: var(--col_back_elevated); */
+		/* padding: 0.5rem 1rem; */
+		/* font-size: 0.8rem; */
+		/* letter-spacing: 1.2px; */
 	}
+}
+
+.icon_btn {
+	height: 1.25em;
+	object-fit: contain;
+	/* width: 100%; */
+	/* width: 1em; */
+}
+
+.icon_btn_external {
+	height: 1.25em;
+	width: min-content;
+	padding-bottom: 0.15em;
+	margin-right: 0;
+	margin-left: 0.5em;
 }

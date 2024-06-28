@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 function MyQuote(props) {
 	return (
@@ -11,8 +11,8 @@ function MyQuote(props) {
 	);
 }
 
-MyQuote.propTypes = {
-	quote: PropTypes.string,
-};
+// MyQuote.propTypes = {
+// 	quote: PropTypes.string,
+// };
 
 export default MyQuote;

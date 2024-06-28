@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "adityas-portfolio"
+  },
+  "targets": {
+    "adityas-portfolio": {
+      "hosting": {
+        "port-old": [
+          "adi-dev-v0"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
